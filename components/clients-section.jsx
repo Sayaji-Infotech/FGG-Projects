@@ -236,10 +236,23 @@ export function ClientsSection() {
   const scrollRef2 = useRef(null)
   const scrollRef3 = useRef(null)
   const [showAllPartners, setShowAllPartners] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Check for mobile viewport
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
+    if (isMobile) return // Don't run animation on mobile
+
     const scrollContainers = [scrollRef1.current, scrollRef2.current, scrollRef3.current]
-    const speeds = [0.05, -0.05, 0.05] // Different speeds and directions for each row
+    const speeds = [0.05, -0.05, 0.05]
 
     const animations = scrollContainers.map((container, index) => {
       if (!container) return null
@@ -255,7 +268,6 @@ export function ClientsSection() {
 
         container.scrollLeft += speed * elapsed
 
-        // Reset scroll position when reaching the end
         if (speed > 0 && container.scrollLeft >= container.scrollWidth - container.clientWidth) {
           container.scrollLeft = 0
         } else if (speed < 0 && container.scrollLeft <= 0) {
@@ -272,7 +284,7 @@ export function ClientsSection() {
     return () => {
       animations.forEach((cleanup) => cleanup && cleanup())
     }
-  }, [])
+  }, [isMobile])
 
   // Effect to prevent body scrolling when modal is open
   useEffect(() => {
@@ -290,7 +302,7 @@ export function ClientsSection() {
   const renderPartnerRow = (partners, ref, className = "") => (
     <div
       ref={ref}
-      className={`flex gap-4 overflow-x-auto py-2 px-2 scrollbar-hide ${className}`}
+      className={`hidden md:flex gap-4 overflow-x-auto py-2 px-2 scrollbar-hide ${className}`}
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       {[...partners, ...partners].map((partner, index) => (
@@ -316,8 +328,8 @@ export function ClientsSection() {
     <section className="py-10 bg-gradient-to-b from-blue-900 to-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
-          {/* Left Content - Updated with conic gradient background */}
-          <div className="lg:w-1/3 mb-10 lg:mb-0 lg:pr-12 text-center lg:text-left rounded-2xl overflow-hidden">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/3 mb-10 lg:mb-0 lg:pr-12 text-center lg:text-left rounded-2xl overflow-hidden">
             <div className="bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827] p-8 rounded-2xl">
               <div className="inline-block rounded-lg bg-white/20 px-4 py-2 text-sm text-white mb-4 backdrop-blur-sm">
                 Trusted Partners
@@ -329,16 +341,16 @@ export function ClientsSection() {
               </p>
               <button
                 onClick={() => setShowAllPartners(true)}
-                className="text-white font-semibold hover:text-blue-200 inline-flex items-center group transition-colors"
+                className="w-full md:w-auto bg-gradient-to-r from-blue-500 to-orange-500 hover:from-blue-600 hover:to-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-[1.02] inline-flex items-center justify-center"
               >
                 View all partners
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
             </div>
           </div>
 
-          {/* Right Content - Scrolling Partners */}
-          <div className="lg:w-2/3 relative overflow-hidden">
+          {/* Right Content - Scrolling Partners (Hidden on Mobile) */}
+          <div className="hidden lg:block lg:w-2/3 relative overflow-hidden">
             {/* Gradient Overlays */}
             <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-blue-950 to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-blue-950 to-transparent pointer-events-none"></div>
@@ -392,7 +404,6 @@ export function ClientsSection() {
                 ))}
               </div>
             </div>
-            
           </div>
         </div>
       )}
