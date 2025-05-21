@@ -1,4 +1,4 @@
-import { Carousel } from "@/components/carousel"
+
 import { ClientsSection } from "@/components/clients-section"
 import { HeroSection } from "@/components/hero-section"
 import { PartnershipSection } from "@/components/partnership-section"
@@ -9,7 +9,7 @@ import { TeamSection } from "@/components/team-section"
 import { MainHeroSection } from "@/components/main-hero"
 import { CompanyHighlights } from "@/components/company-highlights"
 import { OngoingProjects } from "@/components/ongoing-projects"
-
+import {ContactUsBanner} from "@/components/contact-us-banner"
 export const metadata = {
   title: "Business Solutions - Professional Business Services",
   description:
@@ -29,6 +29,7 @@ export default function HomePage() {
       <TeamSection />
       <CompanyHighlights />
       <OngoingProjects/>
+      <ContactUsBanner/>
     </main>
   )
 }
