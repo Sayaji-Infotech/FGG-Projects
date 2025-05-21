@@ -116,7 +116,7 @@ export function TeamSection() {
     <section className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <div className="inline-block rounded-lg bg-blue-500/20 px-4 py-2 text-sm text-blue-400">Our Team</div>
+          <div className="inline-block rounded-lg bg-blue-500/20 px-4 py-2 text-sm text-blue-400  mb-3">Our Team</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-white">
             Meet Our Expert Team
           </h1>

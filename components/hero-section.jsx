@@ -74,7 +74,7 @@ export function HeroSection() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
                 {/* Content */}
                 <div className={`space-y-6 ${index % 2 !== 0 ? "order-2" : "order-1"}`}>
-                  <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary">
+                  <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary mb-3">
                     {section.badge}
                   </div>
                   <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{section.title}</h2>

@@ -4,7 +4,7 @@ export function PartnershipSection() {
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary">
+          <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary  mb-3">
             Strategic Partnership
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
