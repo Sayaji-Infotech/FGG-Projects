@@ -6,127 +6,215 @@ import { ArrowRight, X } from "lucide-react"
 
 const allPartners = [
   {
-    name: "Stallion Structure",
-    logo: "/static/stallion_structures.png",
-    category: "Engineering",
-  },
-  {
-    name: "Shree Guru Infracon",
-    logo: "/static/shree_guru_company.png",
-    category: "Construction",
-  },
-  {
-    name: "KeraTech",
-    logo: "/static/kera_tech.png",
-    category: "Surface Protection",
-  },
-  {
-    name: "FGG Projects",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Development",
-  },
-  {
-    name: "Tech Solutions",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Technology",
-  },
-  {
-    name: "Build Corp",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Construction",
-  },
-  {
-    name: "Design Hub",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Architecture",
-  },
-  {
-    name: "Smart Build",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Engineering",
-  },
-  {
-    name: "Future Tech",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Innovation",
-  },
-  {
-    name: "Green Build",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Sustainability",
-  },
-  {
-    name: "Urban Solutions",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Development",
-  },
-  {
-    name: "Smart Infra",
-    logo: "/static/FGG-Logo.jpg",
-    category: "Infrastructure",
-  },
-  // Additional partners to match the image grid
-  {
-    name: "JK Paper Ltd",
-    logo: "/static/partners/jk-paper.png",
-    category: "Paper Manufacturing",
-  },
-  {
     name: "Reliance Industries",
-    logo: "/static/partners/reliance.png",
     category: "Conglomerate",
   },
   {
-    name: "Vedanta",
-    logo: "/static/partners/vedanta.png",
-    category: "Mining",
+    name: "Tata Consultancy Services (TCS)",
+    category: "Information Technology",
   },
   {
-    name: "BHEL",
-    logo: "/static/partners/bhel.png",
-    category: "Engineering",
+    name: "HDFC Bank",
+    category: "Banking",
   },
   {
-    name: "ONGC",
-    logo: "/static/partners/ongc.png",
+    name: "Bharti Airtel",
+    category: "Telecommunications",
+  },
+  {
+    name: "ICICI Bank",
+    category: "Banking",
+  },
+  {
+    name: "Infosys",
+    category: "Information Technology",
+  },
+  {
+    name: "ITC Limited",
+    category: "Consumer Goods",
+  },
+  {
+    name: "Larsen & Toubro (L&T)",
+    category: "Engineering & Construction",
+  },
+  {
+    name: "HCL Technologies",
+    category: "Information Technology",
+  },
+  {
+    name: "National Stock Exchange (NSE)",
+    category: "Financial Services",
+  },
+  {
+    name: "Life Insurance Corporation of India (LIC)",
+    category: "Insurance",
+  },
+  {
+    name: "State Bank of India (SBI)",
+    category: "Banking",
+  },
+  {
+    name: "Oil and Natural Gas Corporation (ONGC)",
     category: "Oil & Gas",
   },
   {
-    name: "NHAI",
-    logo: "/static/partners/nhai.png",
-    category: "Infrastructure",
+    name: "Indian Oil Corporation",
+    category: "Oil & Gas",
   },
   {
-    name: "Tata Projects",
-    logo: "/static/partners/tata-projects.png",
-    category: "Construction",
+    name: "Bharat Petroleum Corporation Limited (BPCL)",
+    category: "Oil & Gas",
   },
   {
-    name: "Larsen & Toubro",
-    logo: "/static/partners/lt.png",
-    category: "Engineering",
+    name: "Tata Motors",
+    category: "Automotive",
   },
   {
-    name: "Adani Power",
-    logo: "/static/partners/adani-power.png",
+    name: "Axis Bank",
+    category: "Banking",
+  },
+  {
+    name: "NTPC Limited",
     category: "Energy",
   },
   {
-    name: "NTPC",
-    logo: "/static/partners/ntpc.png",
-    category: "Power Generation",
+    name: "Hindustan Unilever Limited (HUL)",
+    category: "Consumer Goods",
   },
   {
-    name: "Indian Oil",
-    logo: "/static/partners/indian-oil.png",
+    name: "Coal India Limited",
+    category: "Mining",
+  },
+  {
+    name: "Mahindra & Mahindra",
+    category: "Automotive",
+  },
+  {
+    name: "Maruti Suzuki India Limited",
+    category: "Automotive",
+  },
+  {
+    name: "Vedanta Limited",
+    category: "Metals & Mining",
+  },
+  {
+    name: "GAIL (India) Limited",
+    category: "Natural Gas",
+  },
+  {
+    name: "Bajaj Finserv",
+    category: "Financial Services",
+  },
+  {
+    name: "Kotak Mahindra Bank",
+    category: "Banking",
+  },
+  {
+    name: "Hindalco Industries",
+    category: "Metals",
+  },
+  {
+    name: "Tata Steel",
+    category: "Steel",
+  },
+  {
+    name: "JSW Steel",
+    category: "Steel",
+  },
+  {
+    name: "Grasim Industries",
+    category: "Diversified",
+  },
+  {
+    name: "Power Finance Corporation",
+    category: "Financial Services",
+  },
+  {
+    name: "Tech Mahindra",
+    category: "Information Technology",
+  },
+  {
+    name: "UPL Limited",
+    category: "Chemicals",
+  },
+  {
+    name: "Jindal Steel and Power",
+    category: "Steel & Energy",
+  },
+  {
+    name: "Sun Pharmaceutical Industries",
+    category: "Pharmaceuticals",
+  },
+  {
+    name: "Dr. Reddy's Laboratories",
+    category: "Pharmaceuticals",
+  },
+  {
+    name: "Aurobindo Pharma",
+    category: "Pharmaceuticals",
+  },
+  {
+    name: "Wipro",
+    category: "Information Technology",
+  },
+  {
+    name: "Adani Power",
+    category: "Energy",
+  },
+  {
+    name: "Adani Wilmar",
+    category: "Consumer Goods",
+  },
+  {
+    name: "Nayara Energy",
     category: "Oil & Gas",
   },
   {
-    name: "HP",
-    logo: "/static/partners/hp.png",
-    category: "Oil & Gas",
+    name: "Petronet LNG",
+    category: "Energy",
   },
-]
+  {
+    name: "IndiGo (InterGlobe Aviation)",
+    category: "Aviation",
+  },
+  {
+    name: "Bank of Baroda",
+    category: "Banking",
+  },
+  {
+    name: "Canara Bank",
+    category: "Banking",
+  },
+  {
+    name: "Punjab National Bank",
+    category: "Banking",
+  },
+  {
+    name: "Union Bank of India",
+    category: "Banking",
+  },
+  {
+    name: "Bank of India",
+    category: "Banking",
+  },
+  {
+    name: "Indian Farmers Fertiliser Cooperative (IFFCO)",
+    category: "Agriculture",
+  },
+  {
+    name: "Hyundai Motor India",
+    category: "Automotive",
+  },
+  {
+    name: "Tata Power",
+    category: "Energy",
+  },
+  {
+    name: "Rajesh Exports",
+    category: "Jewelry",
+  },
+];
+
 
 // Function to shuffle array
 function shuffleArray(array) {

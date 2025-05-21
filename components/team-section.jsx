@@ -8,70 +8,82 @@ import { Linkedin, Twitter, Mail } from "lucide-react"
 const teamMembers = [
   {
     id: 1,
-    name: "Yash Suthar",
-    role: "Structural Engineer",
-    company: "Stallion Structure",
-    image: "/static/team/jay.png",
-    bio: "It was in high school when a design that I made for a class freedom project shaped my future path in structural engineering.",
+    name: "Arpit Suthar",
+    role: "Head",
+    company_role: "Architectural Designing",
+    image: "/static/team/arpit.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:yash@example.com",
+    email: "",
   },
   {
     id: 2,
-    name: "Rajesh Patel",
-    role: "Project Director",
-    company: "Shree Guru Infracon",
-    image: "/static/team/jay.png",
-    bio: "With over 15 years of experience in infrastructure development, I lead our team in executing large-scale government projects.",
+    name: "Yash Suthar",
+    role: "Head",
+    company_role: "Design Enginering",
+    image: "/static/team/yash.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:rajesh@example.com",
+    email: "",
   },
   {
     id: 3,
-    name: "Amit Shah",
-    role: "Surface Protection Specialist",
-    company: "KeraTech",
-    image: "/static/team/jay.png",
-    bio: "My passion for material science led me to develop innovative solutions for industrial surface protection and corrosion resistance.",
+    name: "Raxit Patel",
+    role: "Head",
+    company_role: "Operations",
+    image: "/static/team/raxit.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:amit@example.com",
+    email: "",
   },
   {
     id: 4,
-    name: "Priya Sharma",
-    role: "Architectural Designer",
-    company: "Stallion Structure",
-    image: "/static/team/jay.png",
-    bio: "I believe that great design should balance aesthetics with functionality, creating spaces that inspire and endure.",
+    name: "Chetan Patel",
+    role: "Co-Head",
+    company_role: "Civil Projects",
+    image: "/static/team/chetan.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:priya@example.com",
+    email: "",
   },
   {
     id: 5,
-    name: "Vikram Singh",
-    role: "Civil Engineer",
-    company: "Shree Guru Infracon",
-    image: "/static/team/jay.png",
-    bio: "My focus is on developing sustainable infrastructure solutions that meet the needs of communities while respecting the environment.",
+    name: "Paresh Patel",
+    role: "Co-Head",
+    company_role: "Civil Projects",
+    image: "/static/team/pares.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:vikram@example.com",
+    email: "",
   },
   {
     id: 6,
-    name: "Neha Verma",
-    role: "Chemical Engineer",
-    company: "KeraTech",
-    image: "/static/team/jay.png",
-    bio: "I specialize in formulating advanced coating systems that provide superior protection in harsh industrial environments.",
+    name: "Pushkar Chawra",
+    role: "Head",
+    company_role: "Abrasion & Corrosion Projects",
+    image: "/static/team/pushkar.jpg",
+    bio: "-",
     linkedin: "#",
     twitter: "#",
-    email: "mailto:neha@example.com",
+    email: "",
   },
+  // {
+  //   id: 7,
+  //   name: "Jay Patel",
+  //   role: "Developer",
+  //   company_role: "Web Development",
+  //   image: "/static/team/jay.png",
+  //   bio: "-",
+  //   linkedin: "#",
+  //   twitter: "#",
+  //   email: "",
+  // },
+
 ]
 
 export function TeamSection() {
@@ -144,7 +156,7 @@ export function TeamSection() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* Duplicate the team members to create a seamless loop */}
-            {[...teamMembers, ...teamMembers].map((member, index) => (
+            {teamMembers.map((member, index) => (
               <div
                 key={`${member.id}-${index}`}
                 className="relative flex-shrink-0 w-[280px] rounded-xl overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-blue-500/20 hover:shadow-xl"
@@ -179,7 +191,7 @@ export function TeamSection() {
                 >
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                   <p className="text-sm text-blue-400 mb-1">{member.role}</p>
-                  <p className="text-xs text-gray-400 mb-3">{member.company}</p>
+                  <p className="text-xs text-gray-400 mb-3">{member.company_role}</p>
                   <div className="w-12 h-1 bg-blue-500 mx-auto mb-4 rounded-full"></div>
                   <p className="text-sm text-gray-300 mb-5">{member.bio}</p>
 

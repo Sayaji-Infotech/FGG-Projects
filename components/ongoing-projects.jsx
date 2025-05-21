@@ -9,47 +9,96 @@ import { Button } from "@/components/ui/button"
 const projectsData = [
   {
     id: 1,
-    title: "Scale flagship course for freelancer designer",
-    amount: "₹2,50,000",
+    title: "Proposed ROB in Lieu of LC No. 71 at KM 155/16/18 (DFCC CH 190/802.520) Between Sttion Bhilad - Sanjan",
+    amount: "14 Cr.",
   },
   {
     id: 2,
-    title: "Develop new client portal dashboard",
-    amount: "₹1,80,000",
+    title: "Construction of Road over Bridge in lieu of existing LC No. 70 at KM 152/2-4 Between Sanjan - Bhilad Railway Station of Mumbai - Delhi - Trunk route of Western Railway.",
+    amount: "74 Cr.",
   },
   {
     id: 3,
-    title: "Redesign company website and branding",
-    amount: "₹3,20,000",
+    title: "Construction of Road Over Bridge in lieu of existing LC No.67 at IR chainage KM 146/2-4 between Sanjan – Umbergaon Railway station of Mumbai – Delhi – Trunk route of Western Railway",
+    amount: "70 Cr.",
   },
   {
     id: 4,
-    title: "Implement new CRM system integration",
-    amount: "₹4,50,000",
-
+    title: "Construction of VUP at Km. 334.675 (Dhamdachi)... for the rectification of Blackspots on Surat - Dahisar Section of NH-48 in the State of Gujarat through an EPC",
+    amount: "53 Cr.",
   },
   {
     id: 5,
-    title: "Mobile App Development",
-    amount: "₹5,20,000",
+    title: "Construction of RUB (size 6 x 3) in lieu of LC no. 68 at IR chainage 149/22-24 between Sanjan – Bhilad stations of Vaitarna–Surat section of Mumbai Division of Western Railway",
+    amount: "50 Cr.",
   },
   {
     id: 6,
-    title: "E-commerce Platform",
-    amount: "₹6,80,000",
-
+    title: "CONSTRUCTION OF RAILWAY OVER BRIDGE INCLUDING APPROACHES COMPLETE IN LIEU OF LCNO.255 AT RAILWAY Km424/34-2 BETWEEN STATIONS VADOD TO ANAND OF VADODARA-GERATPUR SECTION OF WESTERN RAILWAY VADODARA DIVISION.",
+    amount: "48 Cr.",
   },
   {
     id: 7,
-    title: "Cloud Migration Project",
-    amount: "₹4,20,000",
+    title: "Construction New Structure of Amreli District Package No.RPC-2/AMR/MMGSY/Normal/2023-24/P.31Ta.Dhari, Dist- Amreli",
+    amount: "35 Cr.",
   },
   {
     id: 8,
-    title: "AI Integration Project",
-    amount: "₹7,50,000",
+    title: "CONSTRUCTION OF 2 LANE ROAD OVER BRIDGES(ROB) WITH APPROACHES (END TO END) IN LIEU OF LC NO. 257AT KM 426/18-20 BETWEEN SECTION VADODARA - GERATPUR OFVADODARA DIVISION.",
+    amount: "33 Cr.",
   },
-]
+  {
+    id: 9,
+    title: "90,000 SQ FT Ground + 5 School Building at Vadodara (Design engineering)",
+    amount: "10 Lacs.",
+  },
+  {
+    id: 10,
+    title: "Sub contracting for design for Adani Projects for 2000 mt weight steel structure mundra (Design engineering)",
+    amount: "18 Lacs.",
+  },
+  {
+    id: 11,
+    title: "Design Engineering Services for Chemical Plant at Dahej, Gujarat",
+    amount: "33 Lacs.",
+  },
+  {
+    id: 12,
+    title: "Acid Proof Tile Lining and Epoxy Painting at Yadri Thermal Power Project 5 x 800 MW, Miryalaguda, Nalgonda, Telangana",
+    amount: "85 Lacs.",
+  },
+  {
+    id: 13,
+    title: "Acid Proof Tile Lining at Sagardiggi Power Plant, Murshidabad, Westbengal",
+    amount: "30 Lacs.",
+  },
+  {
+    id: 14,
+    title: "Acid Proof Tile Lining at NTPC Kahalgaon, Bihar",
+    amount: "30 Lacs.",
+  },
+  {
+    id: 15,
+    title: "Acid Proof Tile Lining and Epoxy coating at NTPC Talcher, Angul, Orissa 660 x 4 MW",
+    amount: "65 Lacs.",
+  },
+  {
+    id: 16,
+    title: "Acid Proof Tile Lining, Food Grade Epoxy coating, Food grade epoxy screed with glass cloth, concrete cracks repairs, injection epoxy grouting, water-proofing",
+    amount: "1 Cr.",
+  },
+  {
+    id: 17,
+    title: "Acid Proof Tile Lining at IOCL, Gujarat Refinary, Vadodara",
+    amount: "10 Lacs.",
+  },
+  {
+    id: 18,
+    title: "Acid Proof Tile Lining at BWSSB, Bengaluru Water treatment Plant at various stations in Karnataka",
+    amount: "14 Lacs.",
+  },
+];
+
 
 // Project Card Component
 const ProjectCard = ({ project }) => {
@@ -60,7 +109,7 @@ const ProjectCard = ({ project }) => {
       
       <div className="flex flex-col space-y-4">
         <div className="flex items-start justify-between">
-          <h2 className="text-xl font-semibold text-gray-800 pr-4">{project.title}</h2>
+          <h2 className="text-md font-semibold text-gray-800 pr-4">{project.title}</h2>
         </div>
         
         <div className="flex items-center justify-between pt-2 border-t border-gray-100">
