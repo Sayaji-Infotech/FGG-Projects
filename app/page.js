@@ -2,8 +2,13 @@ import { Carousel } from "@/components/carousel"
 import { ClientsSection } from "@/components/clients-section"
 import { HeroSection } from "@/components/hero-section"
 import  {PartnershipSection } from "@/components/partnership-section"
-import {MissionVisionValues} from "@/components/vision-values"
+import {MissionValuesTable} from "@/components/mission-values-table"
 import {AboutUs} from "@/components/about-us"
+import { ServicesSection } from "@/components/services-section"
+import { TeamSection } from "@/components/team-section"
+import { MainHeroSection } from "@/components/main-hero"
+
+
 export const metadata = {
   title: "Business Solutions - Professional Business Services",
   description:
@@ -31,11 +36,14 @@ const carouselItems = [
 export default function HomePage() {
   return (
     <main>
-      <Carousel items={carouselItems} />
+      {/* <Carousel items={carouselItems} /> */}
+      <MainHeroSection/>
       <HeroSection />
       <PartnershipSection/>
-      <MissionVisionValues/>
+      <MissionValuesTable/>
       <AboutUs/>
+      <ServicesSection/>
+      <TeamSection/>
       {/* <ClientsSection/> */}
     </main>
   )

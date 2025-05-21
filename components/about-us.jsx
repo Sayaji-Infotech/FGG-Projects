@@ -3,11 +3,19 @@ export function AboutUs() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-16">
+          <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary">
+            About As
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+            About As
+          </h1>
+          <div className="w-[50%] h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div className="space-y-4">
-            <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary">About Us</div>
-            <h2 className="text-4xl font-bold tracking-tighter md:text-5xl">About Us</h2>
-            <p className="max-w-[800px] text-muted-foreground text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Stallion Structures, Shree Guru Infracon Pvt. Ltd., and Keratech have formed a strategic 
             alliance to deliver comprehensive solutions in the engineering and construction sectors. 
             Stallion Structures, an architectural, civil, and structural engineering consultancy and 
@@ -19,7 +27,6 @@ export function AboutUs() {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   )
