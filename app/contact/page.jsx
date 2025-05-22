@@ -1,28 +1,21 @@
 "use client"
 
-import { useState } from "react"
 import { Phone, Mail, Globe, Send, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  const [state, handleSubmit] = useForm("mldbkbko");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log(formData)
-  }
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+  if (state.succeeded) {
+    return (
+      <section className="py-20">
+        <div className="container mx-auto text-center px-4 md:px-6">
+          <h1 className="text-4xl font-bold mb-4 text-green-600">Thank you!</h1>
+          <p className="text-lg text-gray-700">Your message has been successfully sent. We'll get back to you shortly.</p>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -36,12 +29,11 @@ export default function ContactPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mt-16">
-          {/* Contact Details Card */}
+          {/* Contact Details */}
           <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
             <div className="h-2 bg-gradient-to-r from-blue-400 to-orange-400 rounded-t-xl -mt-8 -mx-8 mb-8"></div>
-            
+
             <h2 className="text-2xl font-bold text-gray-800 mb-8">Contact Details</h2>
-            
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-50 p-3 rounded-full">
@@ -66,7 +58,6 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-              
 
               <div className="flex items-start space-x-4">
                 <div className="bg-green-50 p-3 rounded-full">
@@ -80,8 +71,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-
-             
               <div className="flex items-start space-x-4 mt-6">
                 <div className="bg-orange-50 p-3 rounded-full">
                   <MapPin className="h-6 w-6 text-orange-600" />
@@ -99,27 +88,25 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form Card */}
+          {/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
             <div className="h-2 bg-gradient-to-r from-blue-400 to-orange-400 rounded-t-xl -mt-8 -mx-8 mb-8"></div>
-            
             <h2 className="text-2xl font-bold text-gray-800 mb-8">Send us a Message</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Your Name
                 </label>
                 <input
-                  type="text"
                   id="name"
+                  type="text"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-                  placeholder="Jay Patel"
                   required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                  placeholder="Enter your Name"
                 />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
               </div>
 
               <div>
@@ -127,15 +114,14 @@ export default function ContactPage() {
                   Email Address
                 </label>
                 <input
-                  type="email"
                   id="email"
+                  type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-                  placeholder="justjayy19@gmail.com"
                   required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                  placeholder="Enter your Email"
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
 
               <div>
@@ -143,15 +129,14 @@ export default function ContactPage() {
                   Subject
                 </label>
                 <input
-                  type="text"
                   id="subject"
+                  type="text"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
                   placeholder="How can we help you?"
-                  required
                 />
+                <ValidationError prefix="Subject" field="subject" errors={state.errors} />
               </div>
 
               <div>
@@ -161,17 +146,17 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   rows="4"
+                  required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none"
                   placeholder="Your message here..."
-                  required
                 ></textarea>
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
               <Button
                 type="submit"
+                disabled={state.submitting}
                 className="w-full bg-gradient-to-r from-blue-500 to-orange-500 hover:from-blue-600 hover:to-orange-600 text-white py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
                 <Send className="mr-2 h-5 w-5" />
@@ -183,4 +168,4 @@ export default function ContactPage() {
       </div>
     </section>
   )
-} 
+}
