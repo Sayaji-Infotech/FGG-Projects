@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Building2, Menu, Phone } from "lucide-react"
+import { Building2, Menu, Phone, Wrench, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
@@ -115,6 +115,8 @@ export function SiteHeader() {
                           </svg>
                         )}
                         {label === "Companies" && <Building2 className="w-5 h-5 mr-3" />}
+                        {label === "Services" && <Wrench className="w-5 h-5 mr-3" />}
+                        {label === "Our Teams" && <Users className="w-5 h-5 mr-3" />}
                         {label === "Projects" && (
                           <svg
                             className="w-5 h-5 mr-3"

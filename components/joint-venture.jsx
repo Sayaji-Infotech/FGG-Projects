@@ -58,7 +58,7 @@ const sectionData = [
   },
 ];
 
-export function HeroSection() {
+export function JointVenture() {
   return (
     <section className="pt-20">
       <div className="container mx-auto px-4 md:px-6">

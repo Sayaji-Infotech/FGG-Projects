@@ -19,7 +19,7 @@ const allBulletPoints = [
   "Ensure compliance with safety and environmental protection standards during surface treatment processes",
 ]
 
-export function ServicesSection() {
+export function Services() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">

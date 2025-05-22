@@ -1,6 +1,6 @@
 import { Target, Award, Shield, Users, Zap, Building2, Lightbulb, Heart } from "lucide-react"
 
-export function MissionValuesTable() {
+export function MissionValues() {
   const vision = [
     {
       icon: <Building2 className="h-6 w-6 text-blue-600" />,

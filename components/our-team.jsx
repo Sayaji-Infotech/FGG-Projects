@@ -44,7 +44,7 @@ const teamMembers = [
   
 ]
 
-export function TeamSection() {
+export function OurTeams() {
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [isPaused, setIsPaused] = useState(false)
   const scrollContainerRef = useRef(null)

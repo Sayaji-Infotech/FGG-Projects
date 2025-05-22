@@ -1,11 +1,11 @@
 
-import { ClientsSection } from "@/components/clients-section"
-import { HeroSection } from "@/components/hero-section"
-import { PartnershipSection } from "@/components/partnership-section"
-import { MissionValuesTable } from "@/components/mission-values-table"
+import { OurClients } from "@/components/our-clients"
+import { JointVenture } from "@/components/joint-venture"
+import { Partnership } from "@/components/partnership"
+import { MissionValues } from "@/components/mission-values"
 import { AboutUs } from "@/components/about-us"
-import { ServicesSection } from "@/components/services-section"
-import { TeamSection } from "@/components/team-section"
+import { Services } from "@/components/services"
+import { OurTeams } from "@/components/our-team"
 import { MainHeroSection } from "@/components/main-hero"
 import { CompanyHighlights } from "@/components/company-highlights"
 import { OngoingProjects } from "@/components/ongoing-projects"
@@ -23,13 +23,13 @@ export default function HomePage() {
     <main className="flex min-h-screen flex-col">
       <MainHeroSection />
       <ScrollLinkedAnimation/>
-      <HeroSection />
-      <PartnershipSection />
-      <ClientsSection/>
-      <MissionValuesTable />
+      <JointVenture />
+      <Partnership />
+      <OurClients/>
+      <MissionValues />
       <AboutUs />
-      <ServicesSection />
-      <TeamSection />
+      <Services />
+      <OurTeams />
       <CompanyHighlights />
       <OngoingProjects/>
       <ContactUsBanner/>

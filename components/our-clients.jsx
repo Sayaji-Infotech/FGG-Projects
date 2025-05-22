@@ -206,7 +206,7 @@ const row1Partners = shuffleArray(allPartners).slice(0, 4)
 const row2Partners = shuffleArray(allPartners.filter((p) => !row1Partners.includes(p))).slice(0, 4)
 const row3Partners = shuffleArray(allPartners.filter((p) => !row1Partners.includes(p) && !row2Partners.includes(p)))
 
-export function ClientsSection() {
+export function OurClients() {
   const scrollRef1 = useRef(null)
   const scrollRef2 = useRef(null)
   const scrollRef3 = useRef(null)
