@@ -1,8 +1,8 @@
 import React from 'react'
-import { HeroSection } from "@/components/joint-venture"
+import { JointVenture } from "@/components/joint-venture"
 const Companies = () => {
   return (
-    <HeroSection/>
+    <JointVenture/>
   )
 }
 
