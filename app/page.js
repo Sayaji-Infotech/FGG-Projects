@@ -10,6 +10,8 @@ import { MainHeroSection } from "@/components/main-hero"
 import { CompanyHighlights } from "@/components/company-highlights"
 import { OngoingProjects } from "@/components/ongoing-projects"
 import {ContactUsBanner} from "@/components/contact-us-banner"
+import ScrollLinkedAnimation from "@/components/lighting-effect-hero"
+
 export const metadata = {
   title: "Business Solutions - Professional Business Services",
   description:
@@ -20,6 +22,7 @@ export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col">
       <MainHeroSection />
+      <ScrollLinkedAnimation/>
       <HeroSection />
       <PartnershipSection />
       <ClientsSection/>

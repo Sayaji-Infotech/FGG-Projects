@@ -5,214 +5,189 @@ import Image from "next/image"
 import { ArrowRight, X } from "lucide-react"
 
 const allPartners = [
-  {
-    name: "Reliance Industries",
-    category: "Conglomerate",
-  },
-  {
-    name: "Tata Consultancy Services (TCS)",
-    category: "Information Technology",
-  },
-  {
-    name: "HDFC Bank",
-    category: "Banking",
-  },
-  {
-    name: "Bharti Airtel",
-    category: "Telecommunications",
-  },
-  {
-    name: "ICICI Bank",
-    category: "Banking",
-  },
-  {
-    name: "Infosys",
-    category: "Information Technology",
-  },
-  {
-    name: "ITC Limited",
-    category: "Consumer Goods",
-  },
-  {
-    name: "Larsen & Toubro (L&T)",
-    category: "Engineering & Construction",
-  },
-  {
-    name: "HCL Technologies",
-    category: "Information Technology",
-  },
-  {
-    name: "National Stock Exchange (NSE)",
-    category: "Financial Services",
-  },
-  {
-    name: "Life Insurance Corporation of India (LIC)",
-    category: "Insurance",
-  },
-  {
-    name: "State Bank of India (SBI)",
-    category: "Banking",
-  },
-  {
-    name: "Oil and Natural Gas Corporation (ONGC)",
-    category: "Oil & Gas",
-  },
-  {
-    name: "Indian Oil Corporation",
-    category: "Oil & Gas",
-  },
-  {
-    name: "Bharat Petroleum Corporation Limited (BPCL)",
-    category: "Oil & Gas",
-  },
-  {
-    name: "Tata Motors",
-    category: "Automotive",
-  },
-  {
-    name: "Axis Bank",
-    category: "Banking",
-  },
+  // Power Sector
   {
     name: "NTPC Limited",
-    category: "Energy",
-  },
-  {
-    name: "Hindustan Unilever Limited (HUL)",
-    category: "Consumer Goods",
-  },
-  {
-    name: "Coal India Limited",
-    category: "Mining",
-  },
-  {
-    name: "Mahindra & Mahindra",
-    category: "Automotive",
-  },
-  {
-    name: "Maruti Suzuki India Limited",
-    category: "Automotive",
-  },
-  {
-    name: "Vedanta Limited",
-    category: "Metals & Mining",
-  },
-  {
-    name: "GAIL (India) Limited",
-    category: "Natural Gas",
-  },
-  {
-    name: "Bajaj Finserv",
-    category: "Financial Services",
-  },
-  {
-    name: "Kotak Mahindra Bank",
-    category: "Banking",
-  },
-  {
-    name: "Hindalco Industries",
-    category: "Metals",
-  },
-  {
-    name: "Tata Steel",
-    category: "Steel",
-  },
-  {
-    name: "JSW Steel",
-    category: "Steel",
-  },
-  {
-    name: "Grasim Industries",
-    category: "Diversified",
-  },
-  {
-    name: "Power Finance Corporation",
-    category: "Financial Services",
-  },
-  {
-    name: "Tech Mahindra",
-    category: "Information Technology",
-  },
-  {
-    name: "UPL Limited",
-    category: "Chemicals",
-  },
-  {
-    name: "Jindal Steel and Power",
-    category: "Steel & Energy",
-  },
-  {
-    name: "Sun Pharmaceutical Industries",
-    category: "Pharmaceuticals",
-  },
-  {
-    name: "Dr. Reddy's Laboratories",
-    category: "Pharmaceuticals",
-  },
-  {
-    name: "Aurobindo Pharma",
-    category: "Pharmaceuticals",
-  },
-  {
-    name: "Wipro",
-    category: "Information Technology",
-  },
-  {
-    name: "Adani Power",
-    category: "Energy",
-  },
-  {
-    name: "Adani Wilmar",
-    category: "Consumer Goods",
-  },
-  {
-    name: "Nayara Energy",
-    category: "Oil & Gas",
-  },
-  {
-    name: "Petronet LNG",
-    category: "Energy",
-  },
-  {
-    name: "IndiGo (InterGlobe Aviation)",
-    category: "Aviation",
-  },
-  {
-    name: "Bank of Baroda",
-    category: "Banking",
-  },
-  {
-    name: "Canara Bank",
-    category: "Banking",
-  },
-  {
-    name: "Punjab National Bank",
-    category: "Banking",
-  },
-  {
-    name: "Union Bank of India",
-    category: "Banking",
-  },
-  {
-    name: "Bank of India",
-    category: "Banking",
-  },
-  {
-    name: "Indian Farmers Fertiliser Cooperative (IFFCO)",
-    category: "Agriculture",
-  },
-  {
-    name: "Hyundai Motor India",
-    category: "Automotive",
+    category: "Power Generation",
+    logo: "/static/clients/NTPC.png"
   },
   {
     name: "Tata Power",
-    category: "Energy",
+    category: "Power Generation",
+    logo: "/static/clients/Tata-Power.png"
   },
   {
-    name: "Rajesh Exports",
-    category: "Jewelry",
+    name: "Adani Power",
+    category: "Power Generation",
+    logo: "/static/clients/adani-power.webp"
   },
+  {
+    name: "TSGENCO",
+    category: "Power Generation",
+    logo: "/static/clients/TSGENCO.png"
+  },
+  {
+    name: "SJVN Limited",
+    category: "Power Generation",
+    logo: "/static/clients/SJVN.png"
+  },
+  {
+    name: "BHEL",
+    category: "Power Equipment",
+    logo: "/static/clients/BHEL.png"
+  },
+  {
+    name: "Thermax",
+    category: "Power Equipment",
+    logo: "/static/clients/Thermax.png"
+  },
+  {
+    name: "Alstom",
+    category: "Power Equipment",
+    logo: "/static/clients/Alstom.png"
+  },
+
+  // Oil & Gas Sector
+  {
+    name: "Indian Oil Corporation",
+    category: "Oil & Gas",
+    logo: "/static/clients/Indian-Oil.png"
+  },
+  {
+    name: "ONGC",
+    category: "Oil & Gas",
+    logo: "/static/clients/ONGC.png"
+  },
+  {
+    name: "HPCL",
+    category: "Oil & Gas",
+    logo: "/static/clients/HP-Petro.png"
+  },
+  {
+    name: "MRPL",
+    category: "Oil & Gas",
+    logo: "/static/clients/MRPL.png"
+  },
+  {
+    name: "Reliance Industries",
+    category: "Oil & Gas",
+    logo: "/static/clients/Reliance.jpg"
+  },
+
+  // Infrastructure & Construction
+  {
+    name: "Larsen & Toubro",
+    category: "Infrastructure",
+    logo: "/static/clients/larsen-toubro.png"
+  },
+  {
+    name: "Shapoorji Pallonji",
+    category: "Infrastructure",
+    logo: "/static/clients/Shapoorji-Pallonji.png"
+  },
+  {
+    name: "Simplex Infrastructure",
+    category: "Infrastructure",
+    logo: "/static/clients/Simplex-Infrastructures-Ltd.png"
+  },
+  {
+    name: "Patel Engineering",
+    category: "Infrastructure",
+    logo: "/static/clients/patel-engineering.png"
+  },
+  {
+    name: "Punj Lloyd",
+    category: "Infrastructure",
+    logo: "/static/clients/punj-lloyd.jpg"
+  },
+  {
+    name: "NHAI",
+    category: "Infrastructure",
+    logo: "/static/clients/NHAI.png"
+  },
+  {
+    name: "RITES",
+    category: "Infrastructure",
+    logo: "/static/clients/RITES.png"
+  },
+
+  // Engineering & Technology
+  {
+    name: "EIL",
+    category: "Engineering",
+    logo: "/static/clients/EIL.png"
+  },
+  {
+    name: "PDIL",
+    category: "Engineering",
+    logo: "/static/clients/PDIL.jpg"
+  },
+  {
+    name: "Development Consultants",
+    category: "Engineering",
+    logo: "/static/clients/Developemt-Consultants.jpg"
+  },
+  {
+    name: "BGR Energy",
+    category: "Engineering",
+    logo: "/static/clients/BGR.png"
+  },
+  {
+    name: "Wipro",
+    category: "Technology",
+    logo: "/static/clients/Wipro.png"
+  },
+  {
+    name: "Toshiba",
+    category: "Technology",
+    logo: "/static/clients/Toshiba.webp"
+  },
+
+  // Water & Environment
+  {
+    name: "Ion Exchange",
+    category: "Water Treatment",
+    logo: "/static/clients/ion-exchange.png"
+  },
+  {
+    name: "WABAG",
+    category: "Water Treatment",
+    logo: "/static/clients/wabag.webp"
+  },
+  {
+    name: "TAHAL",
+    category: "Water Treatment",
+    logo: "/static/clients/TAHAL.png"
+  },
+
+  // Railways
+  {
+    name: "North Western Railway",
+    category: "Railways",
+    logo: "/static/clients/north-western-railway.jpeg"
+  },
+  {
+    name: "RSRDC",
+    category: "Railways",
+    logo: "/static/clients/RSRDC.jpeg"
+  },
+
+  // Paper & Manufacturing
+  {
+    name: "JK Paper",
+    category: "Manufacturing",
+    logo: "/static/clients/JK-Paper.jpg"
+  },
+  {
+    name: "West Coast Paper Mills",
+    category: "Manufacturing",
+    logo: "/static/clients/west-cost-paper-mills.jpg"
+  },
+  {
+    name: "Vedanta",
+    category: "Manufacturing",
+    logo: "/static/clients/Vedanta.jpg"
+  }
 ];
 
 

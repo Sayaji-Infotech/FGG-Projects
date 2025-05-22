@@ -116,9 +116,9 @@ export function CompanyHighlights() {
         </div>
       </div>
 
-      <div className="mt-20">
+      {/* <div className="mt-20">
         <TurnoverChart3D/>
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Phone, Mail, Globe, Send } from "lucide-react"
+import { Phone, Mail, Globe, Send, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
@@ -66,6 +66,7 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
+              
 
               <div className="flex items-start space-x-4">
                 <div className="bg-green-50 p-3 rounded-full">
@@ -76,6 +77,23 @@ export default function ContactPage() {
                   <a href="https://www.fggprojects.com" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-800 hover:text-primary transition-colors">
                     www.fggprojects.com
                   </a>
+                </div>
+              </div>
+
+
+             
+              <div className="flex items-start space-x-4 mt-6">
+                <div className="bg-orange-50 p-3 rounded-full">
+                  <MapPin className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="text-gray-600 text-sm">Office Location</h3>
+                  <p className="text-lg font-semibold text-gray-800">
+                    224-225, Second Floor,<br />
+                    Vihav Excellus,<br />
+                    Vasna Bhayli Main Road,<br />
+                    Vadodara - 391410
+                  </p>
                 </div>
               </div>
             </div>

@@ -2,88 +2,46 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Linkedin, Twitter, Mail } from "lucide-react"
-
 // Sample team data - replace with your actual team members
 const teamMembers = [
   {
     id: 1,
     name: "Arpit Suthar",
-    role: "Head",
-    company_role: "Architectural Designing",
+    role: "Head - Architectural Designing",
     image: "/static/team/arpit.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
   },
   {
     id: 2,
     name: "Yash Suthar",
-    role: "Head",
-    company_role: "Design Enginering",
+    role: "Head - Design Enginering",
     image: "/static/team/yash.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
+
   },
   {
     id: 3,
     name: "Raxit Patel",
-    role: "Head",
-    company_role: "Operations",
+    role: "Head - Operations",
     image: "/static/team/raxit.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
   },
   {
     id: 4,
     name: "Chetan Patel",
-    role: "Co-Head",
-    company_role: "Civil Projects",
+    role: "Co Head - Civil Projects",
     image: "/static/team/chetan.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
   },
   {
     id: 5,
     name: "Paresh Patel",
-    role: "Co-Head",
-    company_role: "Civil Projects",
+    role: "Co Head - Civil Projects",
     image: "/static/team/pares.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
   },
   {
     id: 6,
     name: "Pushkar Chawra",
-    role: "Head",
-    company_role: "Abrasion & Corrosion Projects",
+    role: "Head - Abrasion & Corrosion Projects",
     image: "/static/team/pushkar.jpg",
-    bio: "-",
-    linkedin: "#",
-    twitter: "#",
-    email: "",
   },
-  // {
-  //   id: 7,
-  //   name: "Jay Patel",
-  //   role: "Developer",
-  //   company_role: "Web Development",
-  //   image: "/static/team/jay.png",
-  //   bio: "-",
-  //   linkedin: "#",
-  //   twitter: "#",
-  //   email: "",
-  // },
-
+  
 ]
 
 export function TeamSection() {
@@ -183,50 +141,14 @@ export function TeamSection() {
                   <p className="text-sm text-blue-400">{member.role}</p>
                 </div>
 
-                {/* Expanded Info - Slides up on hover */}
-                <div
-                  className={`absolute left-0 right-0 bg-gradient-to-t from-gray-900 to-gray-800/95 backdrop-blur-sm p-6 text-center transition-all duration-500 ease-in-out ${
-                    hoveredIndex === index ? "bottom-0" : "-bottom-full"
-                  }`}
-                >
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-sm text-blue-400 mb-1">{member.role}</p>
-                  <p className="text-xs text-gray-400 mb-3">{member.company_role}</p>
-                  <div className="w-12 h-1 bg-blue-500 mx-auto mb-4 rounded-full"></div>
-                  <p className="text-sm text-gray-300 mb-5">{member.bio}</p>
-
-                  <div className="flex justify-center mt-4 space-x-4">
-                    <a
-                      href={member.linkedin}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                      aria-label={`${member.name}'s LinkedIn profile`}
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={member.twitter}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                      aria-label={`${member.name}'s Twitter profile`}
-                    >
-                      <Twitter className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={member.email}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                      aria-label={`Email ${member.name}`}
-                    >
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="text-center mt-10 text-gray-400">
+        {/* <div className="text-center mt-10 text-gray-400">
           <p>Hover over a team member to learn more</p>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -130,7 +130,7 @@ export function OngoingProjects() {
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary mb-3">Ongoing Projects</div>
+          <div className="inline-block rounded-lg bg-primary/10 px-4 py-2 text-sm text-primary mb-3">As on 31st March 2025</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Ongoing Projects</h1>
           <div className="w-[50%] h-1 bg-primary mx-auto rounded-full"></div>
         </div>
