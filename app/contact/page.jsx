@@ -85,6 +85,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -163,6 +164,26 @@ export default function ContactPage() {
                 Send Message
               </Button>
             </form>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-12">
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <div className="h-2 bg-gradient-to-r from-blue-400 to-orange-400 rounded-t-xl -mt-8 -mx-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-8">Our Location</h2>
+            <div className="w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.6339288404333!2d73.1325396751181!3d22.29185267969267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc73d35659cbf%3A0xb61ec337692ab303!2sVihav%20excules!5e0!3m2!1sen!2sin!4v1747918676643!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
