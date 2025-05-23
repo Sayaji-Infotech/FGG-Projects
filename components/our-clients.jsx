@@ -345,7 +345,7 @@ export function OurClients() {
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden flex flex-col">
             {/* Modal Header */}
             <div className="flex justify-between items-center p-6 border-b">
-              <h3 className="text-2xl font-bold text-gray-800">Our Partners & Clients</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Our Clients</h3>
               <button
                 onClick={() => setShowAllPartners(false)}
                 className="p-2 rounded-full hover:bg-gray-100 transition-colors"

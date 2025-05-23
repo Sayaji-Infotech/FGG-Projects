@@ -26,7 +26,7 @@ const sectionData = [
     badge: "Infrastructure Development",
     title: "Shree Guru Infracon Pvt. Ltd.",
     description:
-      "An AA Class Government Approved Contractor specializing in large-scale infrastructure projects. With headquarters in Mehsana, we excel in civil infrastructure development, ROB construction, and project execution with a proven track record of projects worth 50+ Crore.",
+      "An AA Class Government Approved Contractor specializing in large-scale infrastructure projects. With headquarters in Mehsana, we excel in civil infrastructure development, ROB construction, and project execution with a proven track record of projects worth 200+ Crore.",
     image: "/static/shree_guru_company.png",
     imageAlt: "Shree Guru Infracon construction project",
     primaryButton: {
@@ -80,7 +80,7 @@ export function JointVenture() {
                   </div>
                   <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{section.title}</h2>
                   <p className="text-muted-foreground text-lg md:text-xl">{section.description}</p>
-                  <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                  {/* <div className="flex flex-col gap-4 min-[400px]:flex-row">
                     <Button size="lg" asChild>
                       <Link href={section.primaryButton.link}>
                         {section.primaryButton.text}
@@ -90,7 +90,7 @@ export function JointVenture() {
                     <Button variant="outline" size="lg" asChild>
                       <Link href={section.secondaryButton.link}>{section.secondaryButton.text}</Link>
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Image */}

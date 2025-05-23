@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/headerbar"
+import SiteFooter from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
@@ -24,24 +25,7 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
             <div className="flex-1 container mx-auto px-4 md:px-6 py-8 md:py-12">{children}</div>
-            <footer className="border-t py-8 md:py-12">
-              <div className="container mx-auto px-4 md:px-6 flex flex-col items-center justify-between gap-6 md:h-24 md:flex-row">
-                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                  © 2025 Sayaji Infotech Pvt Ltd. All rights reserved.
-                </p>
-                <nav className="flex gap-6 text-sm text-muted-foreground">
-                  <a href="/terms" className="hover:underline">
-                    Terms
-                  </a>
-                  <a href="/privacy" className="hover:underline">
-                    Privacy
-                  </a>
-                  <a href="/contact" className="hover:underline">
-                    Contact
-                  </a>
-                </nav>
-              </div>
-            </footer>
+            <SiteFooter />
           </div>
       </body>
     </html>

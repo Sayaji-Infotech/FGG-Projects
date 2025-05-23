@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from "next/link"
 
 const JointVentureAnimation = () => {
   const containerRef = useRef(null);
@@ -10,6 +11,7 @@ const JointVentureAnimation = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [allLinesConnected, setAllLinesConnected] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  
 
   // Company data
   const companies = [
@@ -28,7 +30,7 @@ const JointVentureAnimation = () => {
     { 
       id: 3, 
       name: 'KeraTech', 
-      description: 'Innovative construction technology',
+      description: 'Surface protection and corrosion-resistant solutions',
       logo: '/static/kera_tech.png'
     },
   ];
@@ -421,9 +423,12 @@ const JointVentureAnimation = () => {
                   exceptional projects that exceed client expectations.
                 </p>
                 
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
-                  View Projects
-                </button>
+
+                  <Link href="/projects" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
+                    View Projects
+                  </Link>
+
+                
                 
                 <div 
                   className={`absolute inset-0 rounded-lg transition-opacity duration-1000 ${

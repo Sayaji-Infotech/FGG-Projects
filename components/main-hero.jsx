@@ -8,9 +8,9 @@ import { useInView } from "react-intersection-observer"
 
 // Stats data
 const stats = [
-  { value: 300, label: "Projects Completed", suffix: "+" },
-  { value: 25, label: "Expert Teams", suffix: "+" },
-  { value: 10, label: "Years Experience", suffix: "+" },
+  { value: 400, label: "Projects Completed", suffix: "+" },
+  { value: 45, label: "Expert Teams", suffix: "+" },
+  { value: 40, label: "Years Experience", suffix: "+" },
 ]
 
 export function MainHeroSection() {
