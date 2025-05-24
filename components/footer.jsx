@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Building2, Phone, Wrench, Users, FileText, Shield } from 'lucide-react'
-
+import Image from 'next/image'
 const SiteFooter = () => {
   const navItems = [
     { href: "/", label: "Home" },
@@ -16,12 +16,31 @@ const SiteFooter = () => {
     <footer className="bg-gradient-to-b from-gray-900 to-blue-900 text-gray-300">
       <div className="max-w-screen-xl px-4 sm:px-6 mx-auto">
         <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8 py-12">
-          <div className="p-5">
+          {/* <div className="p-5">
+            
             <h3 className="font-bold text-xl text-white mb-4">FGG Projects</h3>
             <p className="text-sm text-gray-400">
               Building excellence through innovation and dedication. Your trusted partner in construction and development.
             </p>
-          </div>
+          </div> */}
+
+
+
+          <div className="flex flex-col items-center justify-center py-8 px-4 ">
+                  <div className="relative h-16 w-16 mb-3">
+                    <Image
+                      src="/static/FGG Logo cc.svg"
+                      alt="Company Logo"
+                      fill
+                      // className="object-contain rounded-full shadow-sm"
+                      priority
+                    />
+                  </div>
+                  <h2 className="text-xl font-bold text-white text-center">FGG Projects</h2>
+                  
+                  <p className="text-sm mt-1 text-center">Building excellence through innovation and dedication. Your trusted partner in construction and development.
+                  </p>
+                </div>
           
           <div className="p-5">
             <div className="text-sm uppercase text-blue-300 font-bold mb-4">Quick Links</div>
@@ -76,7 +95,7 @@ const SiteFooter = () => {
             </div>
 
             <div className="text-sm text-gray-400">
-              Made with ❤️ by Sayaji Infotech.
+              Made with ❤️ by<a href='https://www.sayajiinfotech.com/' target='_blank' className='hover:text-white'> Sayaji Infotech</a>.
             </div>
             
           </div>

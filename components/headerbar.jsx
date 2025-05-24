@@ -62,7 +62,7 @@ export function SiteHeader() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden border-blue-300 text-blue-300 hover:bg-blue-900 hover:text-white">
+              <Button variant="outline" size="icon" className="md:hidden border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -76,7 +76,7 @@ export function SiteHeader() {
                       src="/static/FGG Logo cc.svg"
                       alt="Company Logo"
                       fill
-                      className="object-contain rounded-full shadow-sm"
+                      // className="object-contain rounded-full shadow-sm"
                       priority
                     />
                   </div>

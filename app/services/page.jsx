@@ -59,12 +59,21 @@ const ServiceCard = ({ service }) => {
       {/* Top colored bar */}
       <div className="h-2 bg-gradient-to-r from-blue-400 to-orange-600 rounded-t-xl -mt-6 -mx-6 mb-6"></div>
       
-      <div className="flex flex-col space-y-4">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-800">{service.title}</h2>
+      <div className="flex flex-col items-center text-center space-y-4">
+        {/* Centered Image */}
+        <div className="flex justify-center mb-4">
+          <Image 
+            src={`/static/services-Icons/${service.title}.png`} 
+            width={80} 
+            height={80}
+            className="object-contain"
+            alt={service.title}
+          />
         </div>
         
+        {/* Title and Description */}
         <div className="space-y-3">
+          <h2 className="text-xl font-bold text-gray-800">{service.title}</h2>
           <p className="text-gray-600">{service.description}</p>
         </div>
       </div>
