@@ -9,11 +9,30 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: {
-    template: "%s | Business Solutions",
-    default: "Business Solutions - Professional Business Services",
+    template: "%s | FGG Projects",
+    default: "FGG Projects - Excellence in Construction & Engineering | Joint Venture",
   },
-  description: "Professional business solutions tailored to your needs",
-  keywords: ["business", "solutions", "consulting", "professional services"],
+  description: "FGG Projects is a strategic joint venture specializing in architectural engineering, infrastructure development, and surface protection solutions. With 400+ completed projects and 40+ years of combined experience in Vadodara, Gujarat.",
+  keywords: [
+    "construction company",
+    "engineering consultancy", 
+    "infrastructure development",
+    "architectural engineering",
+    "surface protection",
+    "joint venture",
+    "Vadodara",
+    "Gujarat",
+    "civil engineering",
+    "structural engineering",
+    "3D modeling",
+    "Tekla design",
+    "acid resistant solutions",
+    "corrosion protection",
+    "FGG Projects",
+    "Stallion Structures",
+    "Shree Guru Infracon",
+    "Keratech"
+  ],
 }
 
 export default function RootLayout({

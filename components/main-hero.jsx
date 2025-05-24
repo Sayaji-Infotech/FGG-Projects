@@ -94,7 +94,7 @@ export function MainHeroSection() {
             <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl">
 
               <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white">
-                <ModelViewer modelPath="/static/3d/hospital_construction1.glb" />
+                <ModelViewer modelPath="/static/3d/model.glb" />
               </div>
             </div>
 

@@ -12,9 +12,9 @@ import {ContactUsBanner} from "@/components/contact-us-banner"
 import ScrollLinkedAnimation from "@/components/lighting-effect-hero"
 
 export const metadata = {
-  title: "Business Solutions - Professional Business Services",
+  title: "FGG Projects - Excellence in Construction & Engineering | Joint Venture",
   description:
-    "We provide cutting-edge business solutions tailored to your specific needs. Our team of experts is dedicated to helping your company grow and succeed.",
+    "FGG Projects is a strategic joint venture specializing in architectural engineering, infrastructure development, and surface protection solutions. With 400+ completed projects and 40+ years of combined experience, we transform ideas into excellence through precision, innovation, and unmatched quality in construction and engineering.",
 }
 
 export default function HomePage() {
