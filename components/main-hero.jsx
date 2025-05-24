@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useInView } from "react-intersection-observer"
-
+import ModelViewer from '@/components/ModelViewer'
 // Stats data
 const stats = [
   { value: 400, label: "Projects Completed", suffix: "+" },
@@ -92,18 +92,16 @@ export function MainHeroSection() {
           <div className="relative h-[400px] lg:h-[600px] w-full">
             {/* Main Image */}
             <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/static/FGG-hero.png"
-                alt="Construction professional working on a building structure"
-                fill
-                className="object-cover"
-                priority
-              />
+
+              <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white">
+                <ModelViewer modelPath="/static/3d/hospital_construction_-rawscan.glb" />
+              </div>
             </div>
 
             {/* Floating Action Button - Repositioned */}
             <div className="absolute -left-6 bottom-1/3 w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-xl transform transition-all duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer z-10">
-              <ArrowUpRight className="h-8 w-8 text-white" />
+              {/* <ArrowUpRight className="h-8 w-8 text-white" /> */}
+              <p className="text-white font-extrabold">3D</p>
             </div>
 
            
