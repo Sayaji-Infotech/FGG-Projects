@@ -105,7 +105,7 @@ export default function ModelViewer({ modelPath }) {
       
       <Canvas
         camera={{
-          position: [0, 0, 1], // Much more zoomed out
+          position: [0, 0, 10], // Much more zoomed out
           fov: 50,
           near: 0.1,
           far: 100

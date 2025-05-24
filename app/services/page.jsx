@@ -63,7 +63,7 @@ const ServiceCard = ({ service }) => {
         {/* Centered Image */}
         <div className="flex justify-center mb-4">
           <Image 
-            src={`/static/services-Icons/${service.title}.png`} 
+            src={`/static/Services-Icons/${service.title}.png`} 
             width={80} 
             height={80}
             className="object-contain"
