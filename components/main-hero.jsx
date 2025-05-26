@@ -92,17 +92,21 @@ export function MainHeroSection() {
           <div className="relative h-[400px] lg:h-[600px] w-full">
             {/* Main Image */}
             <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl">
-
-              <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white">
-                <ModelViewer modelPath="/static/3d/hospital_construction1.glb" />
-              </div>
+              <video
+                className="w-full h-full object-cover"
+                src="/static/video/videoplayback.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
             </div>
 
             {/* Floating Action Button - Repositioned */}
-            <div className="absolute -left-6 bottom-1/3 w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-xl transform transition-all duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer z-10">
+            {/* <div className="absolute -left-6 bottom-1/3 w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-xl transform transition-all duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer z-10"> */}
               {/* <ArrowUpRight className="h-8 w-8 text-white" /> */}
-              <p className="text-white font-extrabold">3D</p>
-            </div>
+              {/* <p className="text-white font-extrabold">3D</p> */}
+            {/* </div> */}
 
            
           </div>
