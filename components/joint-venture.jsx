@@ -9,7 +9,7 @@ const sectionData = [
     badge: "Engineering Excellence",
     title: "Stallion Structure",
     description:
-      "A premier civil, architectural, and structural engineering consultancy led by Mr. Yash Suthar. We specialize in innovative design, advanced 3D modeling, and Tekla-based engineering, with our principal office at Mangalampark, Laxmipura, Vadodara, Gujarat.",
+      "A premier civil, architectural, and structural engineering consultancy led by Mr. Yash Suthar. We specialize in innovative design, advanced 3D modeling, and Tekla-based engineering.",
     image: "/static/stallion_structures.png",
     imageAlt: "Stallion Structure engineering design",
     primaryButton: {
@@ -43,7 +43,7 @@ const sectionData = [
     badge: "Surface Protection Specialists",
     title: "KeraTech",
     description:
-      "Specialists in surface protection and corrosion-resistant solutions. Based in Vadodara, we provide acid-proof tile lining, epoxy coating, and specialized treatments for power plants, refineries, and water treatment facilities across India.",
+      "Specialists in surface protection and corrosion-resistant solutions. We provide acid-proof tile lining, epoxy coating, and specialized treatments for power plants, refineries, and water treatment facilities across India.",
     image:  "/static/kera_tech.png",
     imageAlt: "KeraTech surface protection application",
     primaryButton: {
